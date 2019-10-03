@@ -12,7 +12,6 @@ public class RoomTransition : MonoBehaviour
     void Start()
     {
         cam = Camera.main.GetComponent<CameraMovement>();
-        Debug.Log("Start!");
     }
 
     // Update is called once per frame

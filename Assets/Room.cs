@@ -19,17 +19,13 @@ public class Room : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("Enter!");
-        if(other.CompareTag("Player")) {
-            
+        if(other.CompareTag("Player") && !other.isTrigger) {
             virtualCam.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        Debug.Log("Exit!");
-        if(other.CompareTag("Player")) {
-
+        if(other.CompareTag("Player") && !other.isTrigger) {
             virtualCam.SetActive(false);
         }
     }
